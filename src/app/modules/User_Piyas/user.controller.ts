@@ -8,12 +8,15 @@ import { User_Services } from "./user.services";
 // create user controller
 const Create_User_Controller = Async_Catch(async (req: Request, res: Response, next: NextFunction) => {
 
-    const result = await User_Services.Create_User_Service(req.body);
+    const { AccessToken, RefreshToken, newUser } = await User_Services.Create_User_Service(req.body);
 
-    res.status(httpStatus.OK).json({
+    res.cookie('RefreshToken', RefreshToken, {
+        httpOnly: true,
+        secure: true
+    }).status(httpStatus.OK).json({
         success: true,
         message: "Successfully create a user !",
-        data: result
+        data: { newUser, AccessToken }
     })
 })
 

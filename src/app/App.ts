@@ -8,6 +8,9 @@ import { Server_Routes } from "./routes";
 import Routes_Not_Found_Handler from "./errors/routeNotFoundError";
 import Global_Error_Handler from "./errors/globalErrorHandler";
 
+// import entities 
+import { User_Entity } from "./entities/User_Entity";
+
 
 const app = express();
 
@@ -25,7 +28,7 @@ createConnection({
     database: 'e_chocolate',
     synchronize: true,
     logging: config.server_status === "DEVELOPMENT" ? true : false,
-    entities: []
+    entities: [User_Entity,]
 })
 
 
