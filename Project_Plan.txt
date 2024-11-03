@@ -1,0 +1,22 @@
+
+----------------------------------------
+Piyas :
+    Back-end : auth, user modules
+    Front-end : 
+
+----------------------------------------
+Sumaiya :
+    Back-end : orderStack module 
+    Front-end : 
+
+----------------------------------------
+Bechitra :
+    Back-end : product module
+    Front-end : 
+
+----------------------------------------
+Bappy :
+    Back-end : cart module
+    Front-end : 
+
+----------------------------------------
